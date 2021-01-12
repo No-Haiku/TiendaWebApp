@@ -4,6 +4,19 @@
 
 {% block content%}
 
-<p>Servicios</p>
+    {% for servicio in servicios %}
+
+<div>
+    <p>
+
+        <h2 style="color: rgb(212, 178, 178);"> {{servicio.titulo}}</h2>
+
+        <p style="color: rgb(212, 178, 178);"> {{servicio.contenido}} </p>
+        <p><img src="{{servicio.imagen.url}}"></p>
+    </p>
+
+</div>
+
+    {% endfor %}
 
 {% endblock %}
